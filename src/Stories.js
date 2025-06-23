@@ -1,3 +1,5 @@
+import Story from "./Story";
+
 export default function Stories() {
   const stories = [
     { image: "assets/9gag.svg", alt: "9gag", user: "9gag" },
@@ -27,14 +29,16 @@ export default function Stories() {
   ];
   return (
     <div className="stories">
-      <div className="story">
-        {stories.map(story => <div className="imagem"> <img src={story.image} alt={story.alt} /></div>)}
-
+      {stories.map((story) => (
+        <Story
+          imagem={story.image}
+          texto={story.alt}
+          usuario={story.user}
+        ></Story>
+      ))}
+      <div className="setinha">
+        <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
-        </div>
+    </div>
   );
 }
-// falta mostrar corretamente os storys
-// function ListaStory(lista) {
-//   return lista.map((userInfo) => ``);
-// }
