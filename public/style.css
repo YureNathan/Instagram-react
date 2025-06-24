@@ -307,7 +307,9 @@ body {
 ion-icon {
   visibility: visible;
 }
-
+.texto ion-icon {
+  font-size: 16px;
+}
 .usuario ion-icon {
   margin-left: 5px;
   padding-top: 5px;
